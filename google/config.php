@@ -1,7 +1,6 @@
 <?php
 require_once 'vendor/autoload.php';
 
-//google ------ credits: john paul maja :D <3 
 $google_client = new Google_Client();
 $google_client->setClientId('862564044784-fbpmelidspimkssnl0etfdcsp76510nc.apps.googleusercontent.com');
 $google_client->setClientSecret('Gos4kW0_ZZAnmUdQMvsTCocA');
@@ -11,5 +10,4 @@ $google_client->addScope('profile');
 
 
 session_start();
-// credits: john paul majaaaaaa
 ?>
