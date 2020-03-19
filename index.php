@@ -83,40 +83,6 @@ $navigation = (isset($_GET['navigation']) && $_GET['navigation'] != '') ? $_GET[
 
         ?>
         <br>
-        <?php //facebook
-            if(isset($facebook_login_url)){
-            echo '<div align="center">' .$facebook_login_url. '</div>';
-            }else{
-             switch($page){
-				case 'Product':
-					require_once 'product_list.php';
-				break;
-				case 'Category':
-					require_once 'category_list.php';
-				break;
-				case 'AddProd':
-					require_once 'addproduct.php';
-				break;
-				case 'Details':
-					require_once 'product_details.php';
-				break;
-				case 'Update':
-					require_once 'updateproduct.php';
-				break;
-				case 'Delete':
-					require_once 'deleteproduct.php';
-				break;	
-			     	case 'Account':
-					require_once 'home.php';
-				break;
-				default:
-			  		require_once 'home.php';
-				break;
-			}
-              }
-            }
-          
-        ?>
       </div>
       <div class="footer">
         <h1>Maja | API</h2> <!-- credits: john paul maja :D <3 -->
