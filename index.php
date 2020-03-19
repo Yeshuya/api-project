@@ -43,25 +43,28 @@ $navigation = (isset($_GET['navigation']) && $_GET['navigation'] != '') ? $_GET[
     <div class="content">
         <?php //google ------ credits: john paul maja :D <3
         if($login_button == ''){
-          switch($navigation){
-            case 'product':
-              require_once 'product.php';
-              break;
-            case 'categories':
-              require_once 'categories.php';
-              break;
-            case 'create':
-              require_once 'form_create.php';
-              break;
-            case 'details':
-              require_once 'product-details.php';
-              break;
-            case 'update':
-              require_once 'form_update.php';
-              break;
-            default:
-              require_once 'home.php';
-              break;
+          switch($page){
+				case 'Product':
+					require_once 'product_list.php';
+				break;
+				case 'Category':
+					require_once 'category_list.php';
+				break;
+				case 'AddProd':
+					require_once 'addproduct.php';
+				break;
+				case 'Details':
+					require_once 'product_details.php';
+				break;
+				case 'Update':
+					require_once 'updateproduct.php';
+				break;
+				case 'Delete':
+					require_once 'deleteproduct.php';
+				break;	
+				default:
+				break;
+			}
           }
         }else{
           echo '<div align="center">'.$login_button . '</div>';
@@ -73,25 +76,28 @@ $navigation = (isset($_GET['navigation']) && $_GET['navigation'] != '') ? $_GET[
             if(isset($facebook_login_url)){
             echo '<div align="center">' .$facebook_login_url. '</div>';
             }else{
-              switch($navigation){
-                case 'product':
-                  require_once 'product.php';
-                  break;
-                case 'categories':
-                  require_once 'categories.php';
-                  break;
-                case 'create':
-                  require_once 'form_create.php';
-                  break;
-                case 'details':
-                  require_once 'product-details.php';
-                  break;
-                case 'update':
-                  require_once 'form_update.php';
-                  break;
-                default:
-                  require_once 'home.php';
-                  break;
+             switch($page){
+				case 'Product':
+					require_once 'product_list.php';
+				break;
+				case 'Category':
+					require_once 'category_list.php';
+				break;
+				case 'AddProd':
+					require_once 'addproduct.php';
+				break;
+				case 'Details':
+					require_once 'product_details.php';
+				break;
+				case 'Update':
+					require_once 'updateproduct.php';
+				break;
+				case 'Delete':
+					require_once 'deleteproduct.php';
+				break;	
+				default:
+				break;
+			}
               }
             }
           
