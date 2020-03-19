@@ -79,7 +79,11 @@ $navigation = (isset($_GET['navigation']) && $_GET['navigation'] != '') ? $_GET[
 				case 'Delete':
 					require_once 'deleteproduct.php';
 				break;	
+			  	case 'Account':
+					require_once 'home.php';
+				break;
 				default:
+			  		require_once 'home.php';
 				break;
 			}
           }
@@ -112,7 +116,11 @@ $navigation = (isset($_GET['navigation']) && $_GET['navigation'] != '') ? $_GET[
 				case 'Delete':
 					require_once 'deleteproduct.php';
 				break;	
+			     	case 'Account':
+					require_once 'home.php';
+				break;
 				default:
+			  		require_once 'home.php';
 				break;
 			}
               }
