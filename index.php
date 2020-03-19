@@ -42,16 +42,6 @@ $navigation = (isset($_GET['navigation']) && $_GET['navigation'] != '') ? $_GET[
 				    </button>
 				    <div class="dropdown-content">
 				      <a href="index.php?page=Account">Account</a>
-				      <?php 
-					    if($login_button == '')
-					    {
-				     		 echo '<a href="logout-google.php">Logout</a>';
-					    }
-					    else if(isset($facebook_login_url))
-					    {
-				     		 echo '<a href="logout-facebook.php">Logout</a>';
-					    }
-			    	      ?>
 				    </div>
 				</div>
 			</div>
