@@ -1,6 +1,5 @@
 <?php 
 $navigation = (isset($_GET['navigation']) && $_GET['navigation'] != '') ? $_GET['navigation']: '';
-//credits: john paul maja :D <3
 
   include('google/google-confirm.php');
   if($login_button == true){
@@ -35,6 +34,24 @@ $navigation = (isset($_GET['navigation']) && $_GET['navigation'] != '') ? $_GET[
 				    </button>
 				    <div class="dropdown-content">
 				      <a href="index.php?page=Category">Category List</a>
+				    </div>
+				</div>
+				<div class="dropdown">
+				    <button class="dropbtn">Settings
+				    	<i class="fa fa-caret-down"></i>
+				    </button>
+				    <div class="dropdown-content">
+				      <a href="index.php?page=Account">Account</a>
+				      <?php 
+					    if($login_button == '')
+					    {
+				     		 echo '<a href="logout-google.php">Logout</a>';
+					    }
+					    else if(isset($facebook_login_url))
+					    {
+				     		 echo '<a href="logout-facebook.php">Logout</a>';
+					    }
+			    	      ?>
 				    </div>
 				</div>
 			</div>
